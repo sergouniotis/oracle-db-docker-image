@@ -16,20 +16,33 @@ can be used as base docker image for other projects
 
 ```
     - git clone 
-    - cp $FOLDER_CONTAINING_ORACLE_DB_ZIP/linuxx64_12201_database.zip in the root directory of the cloned project
-    - ./build
+    - cp $binaries/linuxx64_12201_database.zip in the root directory of the cloned project
+
+```
+
+After that build the base image
+
+```
+  ./base/build.sh
+
+```
+
+## Extend the base image
+
+After that build the extension by providing the credentials and sid of your liking
+
+```
+
+  ./build.sh FOO FOO_PDB fooP@ss234 registry/oracle-db:12.2.0.1
 
 ```
 
 ## Start containers
 
-The compose folder contains various docker-compose files that can be used as as examples on how to create the containers.
+The compose-files folder contains the docker-compose.yml file that can be used as as examples on how to create the containers.
 Additional documentation for the base images is provided by the official oracle github docker images repository ( https://github.com/oracle/docker-images.git )
- 
 
-## Extend the base image
 
-The produced image can be used as an example on how the oracledb base image can be extended.
 
 
 ## Authors
