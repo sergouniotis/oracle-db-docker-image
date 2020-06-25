@@ -1,14 +1,14 @@
-# Dockerized Oracle Instance 12.2.0.1-ee 
+# Dockerized Oracle Instance
 
-The project creates an Oracle Instance base image ( v 12.2.0.1 ) that
-can be used as base docker image for other projects 
+The project creates an Oracle Instance docker image. The 
+image can be used as base docker image for other projects.
 
 ### Prerequisites
 
 ```
   - Docker
   - Oracle account
-  - Download Oracle instance from ( https://download.oracle.com/otn/linux/oracle12c/122010/linuxx64_12201_database.zip ) to a folder of you choice
+  - Download the prefered Oracle instance from ( https://download.oracle.com/otn/linux/oracle12c/122010/linuxx64_12201_database.zip ) to a folder of you choice
    
 ```
 
@@ -23,7 +23,9 @@ can be used as base docker image for other projects
 After that build the base image
 
 ```
-  ./base/build.sh
+  ./base/build.sh 19.3.0 LINUX.X64_193000_db_home.zip
+  or
+  ./base/build.sh 12.2.0.1 linuxx64_12201_database.zip
 
 ```
 
@@ -47,7 +49,7 @@ Additional documentation for the base images is provided by the official oracle 
 
 ## Authors
 
-* **Thanasis Sergouniotis** - *Initial work* - [Home](http://sergouniotis.com)
+* **Thanasis Sergouniotis** - *Initial work* - [Home](http://www.sergouniotis.com)
 
 
 ## Acknowledgments
